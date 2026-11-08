@@ -1,4 +1,4 @@
-﻿decimal[] numbers = new decimal[3];
+﻿decimal[] numbers = new decimal[10];
 bool validInput;
 
 for (int i = 0; i < numbers.Length; i++)
@@ -19,15 +19,20 @@ for (int i = 0; i < numbers.Length; i++)
     } while (!validInput);
 }
 
+ArrayMultiplier multiplier = new ArrayMultiplier();
+multiplier.SetNumbers(numbers);
+decimal average = multiplier.CalculateAverage();
+decimal[] multipliedNumbers = multiplier.MultiplyByAverage();
+
 Console.Write($"Conteúdo do 1º array: ");
 foreach (decimal number in numbers)
 {
     Console.Write($"{number} ");
 }
-
-ArrayMultiplier multiplier = new ArrayMultiplier();
-multiplier.SetNumbers(numbers);
-decimal average = multiplier.CalculateAverage();
-
 Console.WriteLine("");
 Console.WriteLine($"Média: {average:F2}");
+Console.Write($"Conteúdo do 2º array: ");
+foreach (decimal number in multipliedNumbers)
+{
+    Console.Write($"{number:F2} ");
+}

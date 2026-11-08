@@ -13,5 +13,10 @@ public class ArrayMultiplier
         return average;
     }
 
-    
+    public decimal[] MultiplyByAverage()
+    {
+        decimal average = CalculateAverage();
+        decimal[] multipliedNumbers = numbers.Select(number => number * average).ToArray();
+        return multipliedNumbers;
+    }
 }
