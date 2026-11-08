@@ -13,4 +13,18 @@ public class ArrayAnalyzer
     {
         return numbers;
     }
+    public (int smallest, int smallestIndex) FindSmallest()
+    {
+        int smallest = numbers[0];
+        int smallestIndex = 0;
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] < smallest)
+            {
+                smallest = numbers[i];
+                smallestIndex = i;
+            }
+        }
+        return (smallest, smallestIndex);
+    }
 }
