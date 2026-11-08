@@ -27,4 +27,36 @@ public class ArrayAnalyzer
         }
         return (smallest, smallestIndex);
     }
+
+    public (int largest, int largestIndex) FindLargest()
+    {
+        int largest = numbers[0];
+        int largestIndex = 0;
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] > largest)
+            {
+                largest = numbers[i];
+                largestIndex = i;
+            }
+        }
+        return (largest, largestIndex);
+    }
+
+    public double Sum()
+    {
+        double sum = default;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+        return sum;
+    }
+
+    public double CalculateAverage()
+    {
+        double sum = Sum();
+        double average = sum / numbers.Length;
+        return average;
+    }
 }
