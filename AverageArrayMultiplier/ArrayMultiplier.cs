@@ -6,4 +6,12 @@ public class ArrayMultiplier
     {
         numbers = numbersReceived;
     }
+
+    public decimal CalculateAverage()
+    {
+        decimal average = numbers.Average();
+        return average;
+    }
+
+    
 }
