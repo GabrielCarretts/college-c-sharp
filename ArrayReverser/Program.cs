@@ -21,3 +21,16 @@ for (int i = 0; i < numbers.Length; i++)
 
 ArrayReverser reverser = new ArrayReverser();
 reverser.SetNumbers(numbers);
+int[] reverseNumbers = reverser.ReverseNumbers();
+
+Console.Write($"Conteúdo original do array: ");
+foreach (int number in numbers)
+{
+    Console.Write($"{number} ");
+}
+Console.WriteLine();
+Console.Write($"Conteúdo do array invertido: ");
+foreach (int number in reverseNumbers)
+{
+    Console.Write($"{number} ");
+}
